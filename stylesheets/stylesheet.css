@@ -1105,7 +1105,54 @@ footer a:hover {
     transform: rotateY(0.01deg);
     position: absolute;
 }
+.pic {
 
+    position: absolute;
+    right: 9%;
+    top: -3900px;
+}
+
+.pic1 {
+    position: absolute;
+    left: 14%;
+    top: -3900px;
+
+}
+
+.sz {
+    width: 20px;
+    height: 2000px;
+    background: url("../images/sprite.png") no-repeat;
+    z-index: 3;
+    position: relative;
+}
+
+.ren1 {
+    width: 96px;
+    height: 161px;
+    background: url("../images/sprite.png") no-repeat -33px -358px;
+    position: absolute;
+    right: -23px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.ren {
+    width: 96px;
+    height: 161px;
+    background: url("../images/sprite.png") no-repeat -143px 0px;
+    position: absolute;
+    right: -15px;
+    cursor: pointer;
+    z-index: 3;
+
+}
+
+#demo {
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
 
 
 
