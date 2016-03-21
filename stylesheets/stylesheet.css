@@ -484,6 +484,7 @@ header h2 {
     position: relative;
     width: 940px;
     margin: 0 auto;
+
 }
 
 #content-wrapper {
@@ -492,7 +493,7 @@ header h2 {
 
 #main-content {
     float: left;
-    width: 100%;
+    width: 80%;
 }
 
 #main-content img {
@@ -772,7 +773,87 @@ footer a:hover {
 
 /* #Media Queries
 ================================================== */
+.accordion {
+    width: 380px;
+    position: absolute;
+    right: 20px;
+    z-index: 2;
 
+}
+.accordion h4::before{
+    content: "";
+    /*display: none;*/
+}
+.accordion h1, h2, h3, h4 {
+    cursor: pointer;
+    margin: 0;
+    padding-left: 20px;
+}
+.accordion h2, h3, h4 {
+    /*font-family: "News Cycle";*/
+}
+.accordion h1 {
+    padding: 15px 20px;
+    background-color: #333;
+    /*font-family: Lobster;*/
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: #1abc9c;
+}
+.accordion h1:hover {
+    color: #4afcdc;
+}
+.accordion h1:first-child {
+    border-radius: 10px 10px 0 0;
+}
+.accordion h1:last-of-type {
+    border-radius: 0 0 10px 10px;
+}
+.accordion h1:not(:last-of-type) {
+    border-bottom: 1px dotted #1abc9c;
+}
+.accordion div, .accordion p {
+    display: none;
+    margin-bottom: 0;
+}
+.accordion h2 {
+    padding: 5px 25px;
+    background-color: #1abc9c;
+    font-size: 1.1rem;
+    color: #333;
+}
+.accordion h2:hover {
+    background-color: #09ab8b;
+}
+.accordion h3 {
+    padding: 5px 30px;
+    background-color: #b94152;
+    font-size: .9rem;
+    color: #ddd;
+}
+.accordion h3:hover {
+    background-color: #a93142;
+}
+.accordion h4 {
+    padding: 5px 50px;
+    background-color: #ffc25a;
+    font-size: .9rem;
+    color: #af720a;
+}
+.accordion h4:hover {
+    background-color: #e0b040;
+}
+.accordion p {
+    padding: 15px 35px;
+    background-color: #ddd;
+    /*font-family: "Georgia";*/
+    font-size: .8rem;
+    color: #333;
+    line-height: 1.3rem;
+}
+.accordion .opened-for-codepen {
+    display: block;
+}
 /* Smaller than standard 960 (devices and browsers) */
 @media only screen and (max-width: 959px) {
 
@@ -780,7 +861,7 @@ footer a:hover {
 
 /* Tablet Portrait size to standard 960 (devices and browsers) */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-    .stage{
+    .stage {
         display: none;
     }
     .inner {
@@ -814,15 +895,18 @@ footer a:hover {
         content: none;
         /*background-color: #ccc;*/
     }
+    .accordion {
+        position: relative;
+    }
 }
 
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
-    .stage{
+    .stage {
         display: none;
     }
     .inner {
-        width: 98%;
+        width: 100%;
     }
 
     header {
@@ -910,7 +994,9 @@ footer a:hover {
     header h2 {
         font-size: 18px;
     }
-
+    .accordion {
+        position: relative;
+    }
 }
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
@@ -941,7 +1027,9 @@ footer a:hover {
     header h2 {
         font-size: 14px;
     }
-
+    .accordion {
+        position: relative;
+    }
 }
 
 @keyframes move-eye-skew {
@@ -1017,6 +1105,7 @@ footer a:hover {
     transform: rotateY(0.01deg);
     position: absolute;
 }
+
 
 
 
