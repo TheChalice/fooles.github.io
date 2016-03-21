@@ -453,8 +453,8 @@ header {
     padding-top: 40px;
     padding-bottom: 40px;
     font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
-    background: url(../images/topimg2.jpg) no-repeat;
-    /*background-size: cover;*/
+    background: url(../images/topimg1.jpg) no-repeat;
+    background-size: cover;
 
 }
 
@@ -775,10 +775,14 @@ footer a:hover {
 
 /* Smaller than standard 960 (devices and browsers) */
 @media only screen and (max-width: 959px) {
+
 }
 
 /* Tablet Portrait size to standard 960 (devices and browsers) */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
+    .stage{
+        display: none;
+    }
     .inner {
         width: 800px;
     }
@@ -814,6 +818,9 @@ footer a:hover {
 
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
+    .stage{
+        display: none;
+    }
     .inner {
         width: 98%;
     }
@@ -877,10 +884,64 @@ footer a:hover {
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
+    .stage{
+        display: none;
+    }
+    .inner {
+        width: 100%;
+    }
+
+    header {
+        padding: 20px 0;
+    }
+
+    header .inner {
+        position: relative;
+    }
+
+    header h1, header h2 {
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    header h2 {
+        font-size: 18px;
+    }
+
 }
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {
+    .stage{
+        display: none;
+    }
+    .inner {
+        width: 100%;
+    }
+
+    header {
+        padding: 20px 0;
+    }
+
+    header .inner {
+        position: relative;
+    }
+
+    header h1, header h2 {
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    header h2 {
+        font-size: 14px;
+    }
+
 }
 
 @keyframes move-eye-skew {
@@ -949,7 +1010,6 @@ footer a:hover {
 .stage {
     width: 150px;
     height: 150px;
-    display: inline-block;
     margin: 20px;
     perspective: 1200px;
     perspective-origin: 50% 50%;
