@@ -1,14 +1,14 @@
 @charset "utf-8";
 /* Div */
 body {
-    margin: 0;
-    color: #555;
+    /*margin: 0;*/
+    /*color: #555;*/
     min-width: 320px;
     -webkit-text-size-adjust: 100%;
-    background-color: #eeeeee;
-    font-family: "微软雅黑";
-    font-size: 14px;
-    line-height: 20px;
+    /*background-color: #eeeeee;*/
+    /*font-family: "微软雅黑";*/
+    /*font-size: 14px;*/
+    /*line-height: 20px;*/
 }
 
 img {
@@ -20,7 +20,7 @@ img {
 
 a {
     text-decoration: none;
-    color: #333;
+    /*color: #333;*/
 }
 
 a:hover {
@@ -33,7 +33,7 @@ a:hover {
 }
 
 .c-demoslider {
-
+    margin: 0 auto;
 }
 
 /* Global styles */
