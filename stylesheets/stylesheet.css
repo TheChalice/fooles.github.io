@@ -977,6 +977,7 @@ footer a:hover {
     .accordion {
         position: relative;
         margin: 0 auto;
+        right: 0;
     }
 }
 
@@ -1096,6 +1097,7 @@ footer a:hover {
     .accordion {
         position: relative;
         margin: 0 auto;
+        right: 0;
     }
     #main-content {
         width: 100%;
@@ -1143,6 +1145,7 @@ footer a:hover {
     .accordion {
         position: relative;
         margin: 0 auto;
+        right: 0;
     }
     #main-content {
         width: 100%;
