@@ -455,6 +455,8 @@ header {
     font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
     background: url(../images/topimg1.jpg) no-repeat;
     background-size: cover;
+    position: relative;
+    z-index: 3;
 
 }
 
@@ -876,17 +878,15 @@ footer a:hover {
 }
 
 .pic {
-
     position: absolute;
     right: 9%;
-    top: -3800px;
+    top: -3720px;
 }
 
 .pic1 {
     position: absolute;
     left: 14%;
-    top: -3800px;
-
+    top: -3720px;
 }
 
 .sz {
@@ -924,6 +924,74 @@ footer a:hover {
     text-align: center;
 }
 
+.ribbon {
+    width: 100%;
+    display:inline-block;
+    z-index: 4;
+    position: relative;
+}
+
+.ribbon:after, .ribbon:before {
+    margin-top:0.5em;
+    content: "";
+    float:left;
+    border:1.5em solid #795da3;
+}
+
+.ribbon:after {
+    border-right-color:transparent;
+}
+
+.ribbon:before {
+    border-left-color:transparent;
+}
+
+.ribbon a:link, .ribbon a:visited {
+    color:#000;
+    text-decoration:none;
+    float:left;
+    height:3.5em;
+    overflow:hidden;
+}
+
+.ribbon span {
+    background:#795da3;
+    display:inline-block;
+    line-height:3em;
+    padding:0 1em;
+    margin-top:0.5em;
+    position:relative;
+
+    -webkit-transition: background-color 0.2s, margin-top 0.2s;  /* Saf3.2+, Chrome */
+    -moz-transition: background-color 0.2s, margin-top 0.2s;  /* FF4+ */
+    -ms-transition: background-color 0.2s, margin-top 0.2s;  /* IE10 */
+    -o-transition: background-color 0.2s, margin-top 0.2s;  /* Opera 10.5+ */
+    transition: background-color 0.2s, margin-top 0.2s;
+}
+
+.ribbon a:hover span {
+    background:#FFD204;
+    margin-top:0;
+}
+
+.ribbon span:before {
+    content: "";
+    position:relative;
+    top:3em;
+    left:0;
+    border-right:0.5em solid #9B8651;
+    border-bottom:0.5em solid #795da3;
+}
+
+.ribbon span:after {
+    content: "";
+    position:relative;
+    top:3em;
+    right:0;
+    border-left:0.5em solid #9B8651;
+    border-bottom:0.5em solid #795da3;
+}
+
 /* Smaller than standard 960 (devices and browsers) */
 @media only screen and (max-width: 959px) {
 
@@ -931,6 +999,9 @@ footer a:hover {
 
 /* Tablet Portrait size to standard 960 (devices and browsers) */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
+    .ribbon{
+        display: none;
+    }
     .stage {
         display: none;
     }
@@ -983,6 +1054,9 @@ footer a:hover {
 
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
+    .ribbon {
+        display: none;
+    }
     .stage {
         display: none;
     }
@@ -1058,6 +1132,9 @@ footer a:hover {
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
+    .ribbon {
+        display: none;
+    }
     .stage {
         display: none;
     }
@@ -1106,6 +1183,9 @@ footer a:hover {
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {
+    .ribbon {
+        display: none;
+    }
     .stage {
         display: none;
     }
@@ -1224,56 +1304,10 @@ footer a:hover {
     transform-style: preserve-3d;
     transform: rotateY(0.01deg);
     position: absolute;
+    z-index: 4;
 }
 
-.pic {
 
-    position: absolute;
-    right: 9%;
-    top: -3800px;
-}
-
-.pic1 {
-    position: absolute;
-    left: 14%;
-    top: -3800px;
-
-}
-
-.sz {
-    width: 20px;
-    height: 2000px;
-    background: url("../images/sprite.png") no-repeat;
-    z-index: 3;
-    position: relative;
-}
-
-.ren1 {
-    width: 96px;
-    height: 161px;
-    background: url("../images/sprite.png") no-repeat -33px -358px;
-    position: absolute;
-    right: -23px;
-    cursor: pointer;
-    z-index: 3;
-}
-
-.ren {
-    width: 96px;
-    height: 161px;
-    background: url("../images/sprite.png") no-repeat -143px 0px;
-    position: absolute;
-    right: -15px;
-    cursor: pointer;
-    z-index: 3;
-
-}
-
-#demo {
-    width: 1000px;
-    margin: 0 auto;
-    text-align: center;
-}
 
 
 

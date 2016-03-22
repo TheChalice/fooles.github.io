@@ -59,8 +59,8 @@ $(function () {
             ren.style.right = "-45px"
 
         } else {
-            pocketmon1(pic0, scroll().top - 3800)
-            pocketmon1(pic1, scroll().top - 3800)
+            pocketmon1(pic0, scroll().top - 3720)
+            pocketmon1(pic1, scroll().top - 3720)
             ren.style.backgroundPosition = "-143px 0px"
             ren.style.right = "-15px"
 
