@@ -45,57 +45,6 @@ $(function () {
             }
         }
     }
-    function client() {
-        if (window.innerWidth != null) {
-            return {
-                width: window.innerWidth,
-                height: window.innerHeight
-            }
-        } else if (document.compatMode == "CSS1Compat") {
-            return {
-                width: document.documentElement.clientWidth,
-                height: document.documentElement.clientHeight
-            }
-        } else {
-            return {
-                width: document.body.clientWidth,
-                height: document.body.clientHeight
-            }
-        }
-    }
-
-    function getStyle(obj, attr) {
-        if (obj.currentStyle) {
-            return obj.currentStyle[attr];
-        } else {
-            return window.getComputedStyle(obj, null)[attr];
-        }
-    }
-    var sj = $("#phone")[0];
-    var timer2=null
-    var c=0
-    function a(){
-        clearTimeout(timer2)
-        sj.style.backgroundPositionX=c+"px"
-        c=c-80
-        if(c==-1280){
-            c=-720
-        }
-
-        timer2=setTimeout("a()",100)
-    }
-    function b(){
-        clearTimeout(timer2)
-        sj.style.backgroundPositionX=c+"px"
-        c=c+80
-        if(c!=0){
-            timer2=setTimeout("b()",100)
-        }else{
-            c=0
-        }
-
-
-    }
     var pic0 = $("#pic")[0];
     var pic1 = $("#pic1")[0];
     var ren = $("#ren")[0];
@@ -110,8 +59,8 @@ $(function () {
             ren.style.right = "-45px"
 
         } else {
-            pocketmon1(pic0, scroll().top - 3900)
-            pocketmon1(pic1, scroll().top - 3900)
+            pocketmon1(pic0, scroll().top - 3800)
+            pocketmon1(pic1, scroll().top - 3800)
             ren.style.backgroundPosition = "-143px 0px"
             ren.style.right = "-15px"
 

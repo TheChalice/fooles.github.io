@@ -230,7 +230,7 @@ code,
 kbd,
 pre,
 samp {
-    font-family: monospace, monospace;
+    font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
     font-size: 1em;
 }
 
@@ -537,8 +537,9 @@ aside a.button {
 
 code, pre {
     margin-bottom: 30px;
-    font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-    font-size: 13px;
+    /*font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;*/
+    font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+    font-size: 16px;
     /*color: #222;*/
 }
 
@@ -778,20 +779,24 @@ footer a:hover {
     position: absolute;
     right: 20px;
     z-index: 2;
-
+    margin-top: 30px;
 }
-.accordion h4::before{
+
+.accordion h4::before {
     content: "";
     /*display: none;*/
 }
+
 .accordion h1, h2, h3, h4 {
     cursor: pointer;
     margin: 0;
     padding-left: 20px;
 }
+
 .accordion h2, h3, h4 {
     /*font-family: "News Cycle";*/
 }
+
 .accordion h1 {
     padding: 15px 20px;
     background-color: #333;
@@ -800,49 +805,61 @@ footer a:hover {
     font-weight: normal;
     color: #1abc9c;
 }
+
 .accordion h1:hover {
     color: #4afcdc;
 }
+
 .accordion h1:first-child {
     border-radius: 10px 10px 0 0;
 }
+
 .accordion h1:last-of-type {
     border-radius: 0 0 10px 10px;
 }
+
 .accordion h1:not(:last-of-type) {
     border-bottom: 1px dotted #1abc9c;
 }
+
 .accordion div, .accordion p {
     display: none;
     margin-bottom: 0;
 }
+
 .accordion h2 {
     padding: 5px 25px;
     background-color: #1abc9c;
     font-size: 1.1rem;
     color: #333;
 }
+
 .accordion h2:hover {
     background-color: #09ab8b;
 }
+
 .accordion h3 {
     padding: 5px 30px;
     background-color: #b94152;
     font-size: .9rem;
     color: #ddd;
 }
+
 .accordion h3:hover {
     background-color: #a93142;
 }
+
 .accordion h4 {
     padding: 5px 50px;
     background-color: #ffc25a;
     font-size: .9rem;
     color: #af720a;
 }
+
 .accordion h4:hover {
     background-color: #e0b040;
 }
+
 .accordion p {
     padding: 15px 35px;
     background-color: #ddd;
@@ -851,9 +868,60 @@ footer a:hover {
     color: #333;
     line-height: 1.3rem;
 }
+
 .accordion .opened-for-codepen {
     display: block;
 }
+
+.pic {
+
+    position: absolute;
+    right: 9%;
+    top: -3800px;
+}
+
+.pic1 {
+    position: absolute;
+    left: 14%;
+    top: -3800px;
+
+}
+
+.sz {
+    width: 20px;
+    height: 2000px;
+    background: url("../images/sprite.png") no-repeat;
+    z-index: 3;
+    position: relative;
+}
+
+.ren1 {
+    width: 96px;
+    height: 161px;
+    background: url("../images/sprite.png") no-repeat -33px -358px;
+    position: absolute;
+    right: -23px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.ren {
+    width: 96px;
+    height: 161px;
+    background: url("../images/sprite.png") no-repeat -143px 0px;
+    position: absolute;
+    right: -15px;
+    cursor: pointer;
+    z-index: 3;
+
+}
+
+#demo {
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
 /* Smaller than standard 960 (devices and browsers) */
 @media only screen and (max-width: 959px) {
 
@@ -864,6 +932,15 @@ footer a:hover {
     .stage {
         display: none;
     }
+
+    .pic {
+        display: none;
+    }
+
+    .pic1 {
+        display: none;
+    }
+
     .inner {
         width: 800px;
     }
@@ -881,9 +958,8 @@ footer a:hover {
     }
 
     #main-content {
-        width: 490px;
+        width: 100%;
     }
-
     #main-content h1:before,
     #main-content h2:before,
     #main-content h3:before,
@@ -895,8 +971,10 @@ footer a:hover {
         content: none;
         /*background-color: #ccc;*/
     }
+
     .accordion {
         position: relative;
+        margin: 0 auto;
     }
 }
 
@@ -905,6 +983,15 @@ footer a:hover {
     .stage {
         display: none;
     }
+
+    .pic {
+        display: none;
+    }
+
+    .pic1 {
+        display: none;
+    }
+
     .inner {
         width: 100%;
     }
@@ -968,9 +1055,18 @@ footer a:hover {
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-    .stage{
+    .stage {
         display: none;
     }
+
+    .pic {
+        display: none;
+    }
+
+    .pic1 {
+        display: none;
+    }
+
     .inner {
         width: 100%;
     }
@@ -994,16 +1090,30 @@ footer a:hover {
     header h2 {
         font-size: 18px;
     }
+
     .accordion {
         position: relative;
+        margin: 0 auto;
+    }
+    #main-content {
+        width: 100%;
     }
 }
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {
-    .stage{
+    .stage {
         display: none;
     }
+
+    .pic {
+        display: none;
+    }
+
+    .pic1 {
+        display: none;
+    }
+
     .inner {
         width: 100%;
     }
@@ -1027,8 +1137,13 @@ footer a:hover {
     header h2 {
         font-size: 14px;
     }
+
     .accordion {
         position: relative;
+        margin: 0 auto;
+    }
+    #main-content {
+        width: 100%;
     }
 }
 
@@ -1105,17 +1220,18 @@ footer a:hover {
     transform: rotateY(0.01deg);
     position: absolute;
 }
+
 .pic {
 
     position: absolute;
     right: 9%;
-    top: -3900px;
+    top: -3800px;
 }
 
 .pic1 {
     position: absolute;
     left: 14%;
-    top: -3900px;
+    top: -3800px;
 
 }
 
