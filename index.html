@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
     <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
@@ -109,21 +113,20 @@
 <aside class="accordion">
     <h1>notes</h1>
     <div class="">
-        <h2>2016/3</h2>
+        <h2>2016</h2>
         <div class="opened-for-codepen">
-            <h3>3/21</h3>
+            <h3>面向对象(Object Oriented)</h3>
             <div>
                 <h4>设计模式(design model)</h4>
                 <p>设计模式是可重用的用于解决软件设计中一般问题的方案。设计模式如此让人着迷，以至在任何编程语言中都有
                     对其进行的探索。
                     其中一个原因是它可以让我们站在巨人的肩膀上，获得前人所有的经验，保证我们以优雅的方式组织我们的代码，满足我们解决问题所需要的条件。
                     设计模式同样也为我们描述问题提供了通用的词汇。
-                    这比我们通过代码来向别人传达语法和语义性的描述更为方便。</p>
+                    这比我们通过代码来向别人传达语法和语义性的描述更为方便。<a href="index.html">@more</a></p>
 
-                <h4>News Subitem 2</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.</p>
+                <h4>JavaScript作用域(action scope)</h4>
+                <p>作用域是JavaScript最重要的概念之一，想要学好JavaScript就需要理解JavaScript作用域和作用域链的工作原理。
+                    今天这篇文章对JavaScript作用域和作用域链作简单的介绍，希望能帮助大家更好的学习JavaScript。<a href="action.html">@more</a></p>
 
                 <h4>News Subitem 3</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
@@ -302,37 +305,37 @@
                 <a class="xiaoshujiang_code_button hljs-keyword" title="拍照成代码图片">
                     <i class="fa fa-camera"></i></a>
                         <code class="language-python hljs">
-                            //vip客户优惠策略类
-                            Price.vipPrice = function () {
-                            this.discount =0.5;
-                            this.getPrice = function (price) {
-                            return price*this.discount
-                            }
-                            }
+        //vip客户优惠策略类
+        Price.vipPrice = function () {
+        this.discount =0.5;
+        this.getPrice = function (price) {
+        return price*this.discount
+        }
+        }
                         </code>
             </pre>
             <pre class="xiaoshujiang_code_container"><a class="xiaoshujiang_code_button hljs-keyword" title="拍照成代码图片"><i
                     class="fa fa-camera"></i></a>
   <code class="language-python hljs">
-      //老客户优惠策略类
-      Price.oldPrice = function () {
-      this.discount =0.3;
-      this.getPrice = function (price) {
-      return price*this.discount
-      }
-      }
+        //老客户优惠策略类
+        Price.oldPrice = function () {
+        this.discount =0.3;
+        this.getPrice = function (price) {
+        return price*this.discount
+        }
+        }
   </code>
 </pre>
             <pre class="xiaoshujiang_code_container"><a class="xiaoshujiang_code_button hljs-keyword" title="拍照成代码图片"><i
                     class="fa fa-camera"></i></a>
   <code class="language-python hljs">
-      //普通客户
-      Price.oldPrice = function () {
-      this.discount = 1;
-      this.getPrice = function (price) {
-      return price*this.discount
-      }
-      }
+        //普通客户
+        Price.oldPrice = function () {
+        this.discount = 1;
+        this.getPrice = function (price) {
+        return price*this.discount
+        }
+        }
   </code>
 </pre>
             <div class="line_item" data-line="55"></div>
@@ -439,18 +442,18 @@
             <pre class="xiaoshujiang_code_container"><a class="xiaoshujiang_code_button hljs-keyword" title="拍照成代码图片"><i
                     class="fa fa-camera"></i></a>
             <code class="language-python hljs">
-                function gouwuce(){
-                this.price=0;
-                this.products=[];
-                }
-                var g1= new gouwuce();
-                var g2 = new gouwuce();
-                //产品详细信息页面，团购Tuan，秒购Miao
-                var g1 = new gouwuche();
-                g1.price+=1000;
-                //全局变量
-                Window.price=111;
-                Var g2 = new gouwuce();
+        function gouwuce(){
+        this.price=0;
+        this.products=[];
+        }
+        var g1= new gouwuce();
+        var g2 = new gouwuce();
+        //产品详细信息页面，团购Tuan，秒购Miao
+        var g1 = new gouwuche();
+        g1.price+=1000;
+        //全局变量
+        Window.price=111;
+        Var g2 = new gouwuce();
             </code>
             </pre>
             <div class="line_item" data-line="19"></div>
