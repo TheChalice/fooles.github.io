@@ -885,7 +885,7 @@ footer a:hover {
 
 .pic1 {
     position: absolute;
-    left: 14%;
+    left: 9%;
     top: -3720px;
 }
 
@@ -925,10 +925,11 @@ footer a:hover {
 }
 
 .ribbon {
-    width: 100%;
+
     display:inline-block;
     z-index: 4;
     position: relative;
+    margin-left: 40px;
 }
 
 .ribbon:after, .ribbon:before {
@@ -941,7 +942,10 @@ footer a:hover {
 .ribbon:after {
     border-right-color:transparent;
 }
-
+.post-message p {
+    color: cyan !important;
+    font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+}
 .ribbon:before {
     border-left-color:transparent;
 }
