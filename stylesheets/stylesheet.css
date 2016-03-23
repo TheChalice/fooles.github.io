@@ -995,7 +995,168 @@ footer a:hover {
     border-left:0.5em solid #9B8651;
     border-bottom:0.5em solid #795da3;
 }
+#container {
+    -webkit-flex: 1;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#container h1::before {
+    content: "";
+}
+ul.simple-pagination {
+    list-style: none;
+}
 
+.simple-pagination {
+    display: block;
+    overflow: hidden;
+    padding: 0 5px 5px 0;
+    margin: 0;
+}
+
+.simple-pagination ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.simple-pagination li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    float: left;
+}
+.pagination-holder {
+    padding: 0 20px;
+    margin: 10px 0 20px 0;
+    margin-bottom: 20px;
+}
+
+.pagination-holder.black {
+    padding: 20px 20px 15px 20px;
+    background: #444;
+    border: 1px solid #333;
+    border-radius: 2px;
+}
+.simple-pagination li {
+    width: 7% !important;
+    text-align: center;
+}
+@media only screen and (min-width: 768px) {
+    #container {
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    #container {
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 1560px) {
+    #container {
+        width: 100%;
+    }
+}
+#main {
+    width: 100%;
+    line-height: 1.8;
+}
+@media only screen and (min-width: 1024px) {
+    #main {
+        width: 100%;
+        float: left;
+        -webkit-transition: margin 0.5s ease-out;
+        -moz-transition: margin 0.5s ease-out;
+        -o-transition: margin 0.5s ease-out;
+        -ms-transition: margin 0.5s ease-out;
+        transition: margin 0.5s ease-out;
+    }
+}
+#main section.post {
+    background: #242329;
+    margin-bottom: 2.125em;
+}
+#main section.post a {
+    display: block;
+    border-left: 0.5em solid #ccc;
+    -webkit-transition: border-left 0.45s;
+    -moz-transition: border-left 0.45s;
+    -o-transition: border-left 0.45s;
+    -ms-transition: border-left 0.45s;
+    transition: border-left 0.45s;
+    padding: 0.5em;
+}
+@media only screen and (min-width: 768px) {
+    #main section.post a {
+        padding: 1em;
+    }
+}
+#main section.post a:hover {
+    border-left: 0.5em solid #ea6753;
+}
+#main section.post a h1 {
+    color: #2ca6cb;
+    line-height: 2;
+    margin-left:5%;
+}
+#main section.post a p {
+    color: #817c7c;
+}
+#main section.post a time {
+    color: #817c7c;
+    display: block;
+    margin: 0.5em 0;
+    font-size: 0.9em;
+}
+#main article.post-expand {
+    background: #fafafa;
+    margin-bottom: 3.5em;
+}
+#main article.post-expand .img-logo {
+    max-width: 180px;
+    max-height: 96px;
+    display: block !important;
+    margin-right: 0.7em;
+    margin-left: 0.7em;
+    padding: 0;
+    float: right;
+    clear: right;
+}
+#main article.post-expand .img-topic {
+    max-width: 300px;
+    max-height: 1800px;
+    display: block !important;
+    margin-left: 0.7em;
+    margin-right: 0.7em;
+    padding: 0;
+    float: right;
+    clear: right;
+}
+#main article.post-expand .article-more-link a {
+    display: inline-block;
+    line-height: 1em;
+    padding: 6px 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    background: #ddd;
+    color: #817c7c;
+    text-decoration: none;
+}
+#main article.post-expand .article-more-link a:hover {
+    background: #ea6753;
+    color: #fff;
+    text-decoration: none;
+}
+#archive-page section.post a {
+    font-size: 0.9em;
+    padding: 0.5em !important;
+}
+@media only screen and (min-width: 768px) {
+    #archive-page section.post a time {
+        padding-left: 1em;
+    }
+}
 /* Smaller than standard 960 (devices and browsers) */
 @media only screen and (max-width: 959px) {
 
