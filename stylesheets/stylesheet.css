@@ -1186,7 +1186,7 @@ ul.simple-pagination {
     header h1, header h2 {
         width: 340px;
     }
-
+    #main section.post a h1,
     header h1 {
         font-size: 46px;
     }
@@ -1250,6 +1250,7 @@ ul.simple-pagination {
         width: 100%;
     }
 
+    #main section.post a h1,
     header h1 {
         font-size: 48px;
     }
@@ -1328,6 +1329,7 @@ ul.simple-pagination {
         width: 100%;
     }
 
+    #main section.post a h1,
     header h1 {
         font-size: 32px;
     }
@@ -1379,6 +1381,7 @@ ul.simple-pagination {
         width: 100%;
     }
 
+    #main section.post a h1,
     header h1 {
         font-size: 20px;
     }
