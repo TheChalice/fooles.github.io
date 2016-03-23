@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
     <link rel="stylesheet" href="stylesheets/style.css" type="text/css"/>
     <style>.iris {
-        background: radial-gradient(circle at 50% 50%, #208ab4 0%, #FF0000 30%, #4381b2 100%)
+        background: radial-gradient(circle at 50% 50%, #208ab4 0%, #FF9DEE 30%, #4381b2 100%)
     }</style>
     <script type='text/javascript' src='javascripts/modernizr.min.js'></script>
     <script type='text/javascript'>var CSSettings = {"pluginPath": "module"};</script>
@@ -273,207 +273,336 @@
     <div class="inner clearfix">
         <section id="main-content">
             <div class="line_item" data-line="0"></div>
-            <h2 class="line  " data-line="0" id="javascripte4bd9ce794a8e59f9f">JavaScript作用域</h2>
+            <h2 class="line  " data-line="0">面向对象继承(succession)</h2>
             <div class="line_item" data-line="1"></div>
-            <p class="line  " data-line="1">
-                <strong>任何程序设计语言都有作用域的概念，简单的说，作用域就是变量与函数的可访问范围，
-                    即作用域控制着变量与函数的可见性和生命周期。
-                    在JavaScript中，变量的作用域有全局作用域和局部作用域两种。</strong>
-            </p>
-            <div class="line_item" data-line="2"></div>
-            <h3 class="line  " data-line="2">全局作用域（Global Scope）</h3>
-            <div class="line_item" data-line="3"></div>
-            <p class="line  " data-line="3">在代码中任何地方都能访问到的对象拥有全局作用域，
-                一般来说以下几种情形拥有全局作用域：</p>
+            <h3 class="line  " data-line="1">通过圣斗士星矢理解继承</h3>
             <ul>
                 <li>
-                    <p>最外层函数和在最外层函数外面定义的变量拥有全局作用域，例如：</p>
+                    <p>星矢不穿圣衣：能力一般</p>
                 </li>
-            </ul>
-<pre class="xiaoshujiang_code_container"><a class="xiaoshujiang_code_button hljs-keyword" title="拍照成代码图片"><i
-        class="fa fa-camera"></i></a>
-  <code class="language-python hljs">
-      var authorName="山边小溪";
-      function doSomething(){
-      var blogName="梦想天空";
-      function innerSay(){
-      alert(blogName);
-      }
-      innerSay();
-      }
-      alert(authorName);//山边小溪
-      alert(blogName);//脚本错误
-      doSomething();//梦想天空
-      innerSay() //脚本错误
-  </code>
-</pre>
-            <ul>
                 <li>
-                    <p>所有末定义直接赋值的变量自动声明为拥有全局作用域，例如：</p>
+                    <p>穿上青铜圣衣：变强</p>
                 </li>
-            </ul>
-<pre class="xiaoshujiang_code_container"><a class="xiaoshujiang_code_button hljs-keyword" title="拍照成代码图片"><i
-        class="fa fa-camera"></i></a>
-  <code class="language-python hljs">
-      function doSomething(){
-      var authorName="山边小溪";
-      blogName="梦想天空";
-      alert(authorName);
-      }
-      doSomething();//山边小溪
-      alert(blogName);//梦想天空
-      alert(authorName);//脚本错误
-  </code>
-</pre>
-            <div class="line_item" data-line="30"></div>
-            <p class="line  " data-line="30">变量blogName拥有全局作用域，而authorName在函数外部无法访问到。</p>
-            <ul>
                 <li>
-                    <p>所有window对象的属性拥有全局作用域
-                        <br> 一般情况下，window对象的内置属性都拥有全局作用域，
-                        例如window.name、window.location、window.top等等。
+                    <p>穿上黄金圣衣：拥有了黄金圣衣带来的力量以及黄金一箭</p>
+                </li>
+                <li>
+                    <p>女神的能量：摸手</p>
+                </li>
+                <li>
+                    <p>领悟到第七感：变得更厉害</p>
+                </li>
+                <li>
+                    <p>总结：星矢通过穿上黄金圣衣拥有了黄金圣衣的力量和黄金箭
+                        <br> 这就是我们今天要讲的继承。
                     </p>
                 </li>
             </ul>
-
-            <div class="line_item" data-line="33"></div>
-            <h3 class="line  " data-line="33">局部作用域（Local Scope）</h3>
-            <div class="line_item" data-line="34"></div>
-            <p class="line  " data-line="34">
-                和全局作用域相反，局部作用域一般只在固定的代码片段内可访问到，最常见的例如函数内部，
-                所有在一些地方也会看到有人把这种作用域称为函数作用域，
-                例如下列代码中的blogName和函数innerSay都只拥有局部作用域。</p>
-<pre class="xiaoshujiang_code_container"><a class="xiaoshujiang_code_button hljs-keyword" title="拍照成代码图片"><i
-        class="fa fa-camera"></i></a>
-  <code class="language-python hljs">
-      function doSomething(){
-      var blogName="梦想天空";
-      function innerSay(){
-      alert(blogName);
-      }
-      innerSay();
-      }
-      alert(blogName);//脚本错误
-      innerSay(); //脚本错误
-  </code>
-</pre>
-            <div class="line_item" data-line="46"></div>
-            <h3 class="line  " data-line="46">作用域链（Scope Chain）</h3>
-            <div class="line_item" data-line="47"></div>
-            <p class="line  " data-line="47">
-                在JavaScript中，函数也是对象，实际上，JavaScript里一切都是对象。函数对象和其它对象一样，
-                拥有可以通过代码访问的属性和一系列仅供JavaScript引擎访问的内部属性。
-                其中一个内部属性是[[Scope]]，
-                由ECMA-262标准第三版定义，该内部属性包含了函数被创建的作用域中对象的集合，
-                这个集合被称为函数的作用域链，它决定了哪些数据能被函数访问。
-                <br> 　　当一个函数创建后，它的作用域链会被创建此函数的作用域中可访问的数据对象填充。
-                例如定义下面这样一个函数：
-            </p>
-<pre class="xiaoshujiang_code_container"><a class="xiaoshujiang_code_button hljs-keyword" title="拍照成代码图片"><i
-        class="fa fa-camera"></i></a>
-  <code class="language-python hljs">
-      function add(num1,num2) {
-      var sum = num1 + num2;
-      return sum;
-      }
-      </code>
-    </pre>
-            <div class="line_item" data-line="0"></div>
-            <p class="line  " data-line="0">
-                在函数add创建时，它的作用域链中会填入一个全局对象，该全局对象包含了所有全局变量.
-                <br> 执行此函数时会创建一个称为“运行期上下文(execution context)”的内部对象，运行期上下文定义了函数执行时的环境。每个运行期上下文都有自己的作用域链，用于标识符解析，当运行期上下文被创建时，而它的作用域链初始化为当前运行函数的[[Scope]]所包含的对象。
-                <br> 　　这些值按照它们出现在函数中的顺序被复制到运行期上下文的作用域链中。它们共同组成了一个新的对象，叫“活动对象(activationobject)”，该对象包含了函数的所有局部变量、命名参数、参数集合以及this，然后此对象会被推入作用域链的前端，当运行期上下文被销毁，活动对象也随之销毁。
-                <br> 　　在函数执行过程中，没遇到一个变量，都会经历一次标识符解析过程以决定从哪里获取和存储数据。该过程从作用域链头部，也就是从活动对象开始搜索，查找同名的标识符，如果找到了就使用这个标识符对应的变量，如果没找到继续搜索作用域链中的下一个对象，如果搜索完所有对象都未找到，则认为该标识符未定义。函数执行过程中，每个标识符都要经历这样的搜索过程。
-            </p>
-            <div class="line_item" data-line="4"></div>
-            <h3 class="line  " data-line="4">作用域链和代码优化</h3>
-            <div class="line_item" data-line="5"></div>
-            <p class="line  " data-line="5">从作用域链的结构可以看出，
-                在运行期上下文的作用域链中，标识符所在的位置越深，读写速度就会越慢。
-                因为全局变量总是存在于运行期上下文作用域链的最末端，
-                因此在标识符解析的时候，查找全局变量是最慢的。
-                所以，在编写代码的时候应尽量少使用全局变量，尽可能使用局部变量。
-                一个好的经验法则是：如果一个跨作用域的对象被引用了一次以上，则先把它存储到局部变量里再使用
-                。例如下面的代码：</p>
-<pre class="xiaoshujiang_code_container"><a class="xiaoshujiang_code_button hljs-keyword" title="拍照成代码图片"><i class="fa fa-camera"></i></a>
-  <code class="language-python hljs">
-      function changeColor(){
-      document.getElementById("btnChange").onclick=function(){
-      document.getElementById("targetCanvas").style.backgroundColor="red";
-      };
-      }
-  </code>
-</pre>
             <div class="line_item" data-line="9"></div>
-            <p class="line  " data-line="9">这个函数引用了两次全局变量document，查找该变量必须遍历整个作用域链,
-                直到最后在全局对象中才能找到。这段代码可以重写如下：</p>
-<pre class="xiaoshujiang_code_container"><a class="xiaoshujiang_code_button hljs-keyword" title="拍照成代码图片"><i class="fa fa-camera"></i></a>
-  <code class="language-python hljs">
-      function changeColor(){
-      var doc=document;
-      doc.getElementById("btnChange").onclick=function(){
-      doc.getElementById("targetCanvas").style.backgroundColor="red";
-      };
-      }
-  </code>
-</pre>
+            <h3 class="line  " data-line="9">从现实的角度理解继承</h3>
+            <div class="line_item" data-line="10"></div>
+            <p class="line  " data-line="10">儿子女儿和父亲母亲长得很像包含两层含义：
+                <br> 儿子女儿拥有了父亲母亲的某些特性（方法属性）比如：双眼皮，单眼皮，身高，柳叶眉，刀眉，剑眉，聪明（主要是继承在母亲）.
+                <br> 同时，儿子，女儿还有自己的一些特性，也就是儿子，女儿并不是和父亲或者母亲长得一模一样
+                <br> 从父母 儿子的角度理解继承。从两点分析：</p>
+            <ul>
+                <li>
+                    <p>第一点：我们长得和我们父母很像
+                        <br> 眉毛 鼻子 嘴巴 身高 天赋</p>
+                </li>
+                <li>
+                    <p>第二点：我们还有自己的一些特点
+                        <br> 我们的某些部位可能和父母不一样(前提你的邻居不姓王)；
+                    </p>
+                </li>
+            </ul>
+            <div class="line_item" data-line="18"></div>
+            <h3 class="line  " data-line="18">从商城中分析继承</h3>
             <div class="line_item" data-line="19"></div>
-            <p class="line  " data-line="19">这段代码比较简单，重写后不会显示出巨大的性能提升，
-                但是如果程序中有大量的全局变量被从反复访问，那么重写后的代码性能会有显著改善。</p>
-            <div class="line_item" data-line="20"></div>
-            <h3 class="line  " data-line="20" id="e694b9e58f98e4bd9ce794a8e59f9fe993be">改变作用域链</h3>
-            <div class="line_item" data-line="21"></div>
-            <p class="line  " data-line="21">函数每次执行时对应的运行期上下文都是独一无二的，所以多次调用同一个函数就会导致创建多个运行期上下文，当函数执行完毕，执行上下文会被销毁。每一个运行期上下文都和一个作用域链关联。一般情况下，在运行期上下文运行的过程中，其作用域链只会被
-                with 语句和 catch 语句影响。
-                <br> with语句是对象的快捷应用方式，用来避免书写重复代码。例如：
+            <p class="line  " data-line="19">思考普通类产品和服务类产品的相同点，不同点：
+                <br> 普通产品：书籍 手机 电脑
+                <br> 服务类产品：旅游 充值 团购（聚餐） 电影票
+                <br>
+                <strong>
+                    <em>分析不同点和相同点</em>
+                </strong>
+                <br>
+                <strong>相同点</strong>：
+                <br> 名称 图片 描述 价格 购买
+                <br>
+                <strong>属性的不同点</strong>：
+                <br> 衣服：尺寸XX XLL XLLLLL 款式 男款 裙子 设计师
+                <br> 电子书：版权 出版社 作者 ISBN 出版号 出版日期
+                <br>
+                <strong>方法的不同点（购买流程）</strong>：</p>
+            <ul>
+                <li>
+                    <p>书籍购买：点击购买--生成订单--物流 --收货</p>
+                </li>
+                <li>
+                    <p>电影票购买：点击购买--生成订单--托管金钱--生成一个二维码--购买者拿着这个二维码或者凭证线下去电影院去让人家扫一下--这个时候平台才把金钱打到电影院的银行卡里面--完成这个流程</p>
+                </li>
+                <li>
+                    <p>电子书购买：试读--购买之后允许阅读全部内容
+                        <br>
+                        <strong>
+                            <em>总结</em>
+                        </strong>：名称都是购买，但是购买的流程不一样，就是代码不一样
+                        <br> Buy（）--抽象的
+                        <br> 具体的购买是根据每个产品的不同而不同的
+                        <br> 都叫buy，但是实现的代码是不一样的
+                    </p>
+                </li>
+            </ul>
+            <div class="line_item" data-line="36"></div>
+            <h4 class="line  " data-line="36">高级语言或者ES6描述以上代码</h4>
+<pre class="xiaoshujiang_code_container"><a class="xiaoshujiang_code_button hljs-keyword" title="拍照成代码图片"><i class="fa fa-camera"></i></a>
+  <code class="language-python hljs">
+      Class base{
+      Name Price Images buy()
+      }
+      Class ebook：base{
+      Publisher Author PublishDate
+      Buy()//重写基类
+      }
+      Class close{
+      Sizes[x,xl,xxl,xxxl]
+      Colors[‘白色’]
+      Buy()//重写基类
+      }
+      Class p2p{
+      //利率
+      //赎回日期
+      Buy（）
+      }
+  </code>
+</pre>
+            <div class="line_item" data-line="63"></div>
+            <p class="line  " data-line="63">
+                <strong>
+                    <em>术语总结</em>
+                </strong>:
+                <br> 父类 基类
+                <br> 子类 派生类</p>
+            <div class="line_item" data-line="66"></div>
+            <h3 class="line  " data-line="66" id="e5ad90e4b8bbe9a298e69c80e7bb88e680bbe7bb93">子主题最终总结</h3>
+            <div class="line_item" data-line="67"></div>
+            <p class="line  " data-line="67">所谓的继承：</p>
+            <ul>
+                <li>
+                    <p>现实1：拥有父亲的特性 -- 编程世界：可以访问父类的属性和方法</p>
+                </li>
+                <li>
+                    <p>现实2：拥有自己的一些特性：可以定义自己的一些属性和方法
+                        <br> 多态：
+                        <br> 动物
+                        <br> 比如都是动物 但是人，狗，猫是不一样的。。。
+                        <br> 产品的多态
+                        <br> 都是产品，但是此产品非彼产品，也就是每种产品都有自己独特的东西
+                        <br> 购买这个方法
+                        <br> 但是购买，但是购买的方式是不同的。
+                        <br> 总结多态：
+                        <br> 对象的多态 ，方法的多态</p>
+                </li>
+            </ul>
+            <div class="line_item" data-line="79"></div>
+            <h3 class="line  " data-line="79" id="e4b8bae4bb80e4b988e4bdbfe794a8e7bba7e689bf">为什么使用继承</h3>
+            <div class="line_item" data-line="80"></div>
+            <p class="line  " data-line="80">把相类似的功能--基类 父类里面
+                <br> 不同的定义在自身里面
+                <br> 避免重复
+                <br> 统一管理不同形态的对象集
+            </p>
+            <div class="line_item" data-line="84"></div>
+            <h3 class="line  " data-line="84" id="e7acace4b880e5b18220objecte4b8ade79a84e7bba7e689bf20e2809320e69c80e7ae80e58d95e79a84e7bba7e689bfe28094e4b887e789a9e983bde7bba7e689bfe59ca8object">第一层 Object中的继承 – 最简单的继承—万物都继承在object</h3>
+            <div class="line_item" data-line="85"></div>
+            <p class="line  " data-line="85">万物都继承在object
+                <br> 准确的说：万物都继承自object.prototype
+                <br> 也就是说 所有的对象不管是内置，还是自定义都是继承自object
+                <br> 两个含义：
+            </p>
+            <ul>
+                <li>
+                    <p>第一层：拥有了object 的所有特性（属性 方法）</p>
+                </li>
+                <li>
+                    <p>第二层：我还拥有自己的特性
+                        <br> toString（）
+                        <br> Array String 等对象一般会重写toString（）
+                        <br> Object.prototype.toString()
+                        <br> 比如：String对象他就拥有tostring方法还拥有自己的方法：比如substr，substring。。。。。也就是：js中的一切对象都能够访问object中的方法
+                    </p>
+                </li>
+            </ul>
+            <div class="line_item" data-line="96"></div>
+            <h3 class="line  " data-line="96">第二层 内置对象的继承关系</h3>
+            <div class="line_item" data-line="97"></div>
+            <p class="line  " data-line="97">所有的内置对象都是其首字母大写的类型的构造函数实例出来的
+                <br> 所以所有实例原型都指向其构造函数所有构造函数的原型对象都指向Function.prototy.
+                <br> Function.prototy原型对象是Object.prototype
+            </p>
+            <div class="line_item" data-line="100"></div>
+            <h3 class="line  " data-line="100">第三层 面向对象三大特性</h3>
+            <div class="line_item" data-line="101"></div>
+            <p class="line  " data-line="101">继承性 多态 封装</p>
+            <ul>
+                <li>
+                    <p>封装：
+                        <br> 函数：工具
+                        <br> 对象：工具包
+                        <br> 隐藏细节 隐藏复杂</p>
+                </li>
+                <li>
+                    <p>多态
+                        <br> 一件事情有多种形态。。。
+                        <br> 人：男人 女人。。。
+                        <br> 动物：每种动物都是不一样的。。。
+                        <br> 多态能够保证生物的多样性。。。
+                        <br> 产品 ：基类（产品）
+                        <br> 电子书 服装 服务类产品
+                        <br> 刚才：通过继承实现多态
+                        <br> 方法的多态：
+                        <br> Buy：
+                        <br> 购买一个电子书 ：可以在线阅读全部
+                        <br> 购买一个手机：物流。。。
+                        <br> 同类‘事物’，多种形态
+                        <br> 人的多态：男人，女人
+                        <br> 动物的多态：鸭子，鹅，鸡，猪。。。，
+                        <br> 动物叫声多态：虽然动物都会叫，但是叫声也是多态的—鸟鸣，猪吼，虎啸，狼嚎，龙吟，猿鸣，马嘶，狮吼，犬吠，鸟啼
+                    </p>
+                </li>
+            </ul>
+            <div class="line_item" data-line="122"></div>
+            <h3 class="line  " data-line="122" id="e9878de8bdbd">重载</h3>
+            <div class="line_item" data-line="123"></div>
+            <p class="line  " data-line="123">定义:一个方法,名称相同,通过参数个数不同或者参数的类型不同执行不同的功能.
+                <br> 但是js不支持重载
+                <br> 不支持 根据参数的不同调用不同的函数 XXX
+                <br> Js 如果你传递不同的参数，js无法识别
+                <br> js永远只会调用调用后面的同名函数
             </p>
 <pre class="xiaoshujiang_code_container"><a class="xiaoshujiang_code_button hljs-keyword" title="拍照成代码图片"><i class="fa fa-camera"></i></a>
   <code class="language-python hljs">
-      function initUI(){
-      with(document){
-      var bd=body,
-      links=getElementsByTagName("a"),
-      i=0,
-      len=links.length;
-      while(i &lt; len){
-      update(links[i++]);
-      } getElementById("btnInit").onclick=function(){
-      doSomething();
-      };
+      function Add(a,b) {
+      return a+b
       }
+      function Add(a,b,c) {
+      return a+b+c
       }
+      alert(Add(1,2))
+      alert(Add(1,2,3))
   </code>
 </pre>
-            <div class="line_item" data-line="39"></div>
-            <p class="line  " data-line="39">这里使用width语句来避免多次书写document，看上去更高效，实际上产生了性能问题。
-                <br> 　　当代码运行到with语句时，运行期上下文的作用域链临时被改变了。一个新的可变对象被创建，它包含了参数指定的对象的所有属性。这个对象将被推入作用域链的头部，这意味着函数的所有局部变量现在处于第二个作用域链对象中，因此访问代价更高了。
-                <br> 因此在程序中应避免使用with语句，在这个例子中，只要简单的把document存储在一个局部变量中就可以提升性能。
-                <br> 　　另外一个会改变作用域链的是try-catch语句中的catch语句。当try代码块中发生错误时，执行过程会跳转到catch语句，然后把异常对象推入一个可变对象并置于作用域的头部。在catch代码块内部，函数的所有局部变量将会被放在第二个作用域链对象中。示例代码：
+            <div class="line_item" data-line="139"></div>
+            <p class="line  " data-line="139">用typeof与anguments重载</p>
+<pre class="xiaoshujiang_code_container"><a class="xiaoshujiang_code_button hljs-keyword" title="拍照成代码图片"><i class="fa fa-camera"></i></a>
+  <code class="language-python hljs">
+      var MyClass=function(){
+      var AddNum=function(a,b){
+      return a+b;
+      }
+      var AddString=function(a,b){
+      return "I am here"+a+b;
+      }
+      this.Add=function(a,b){
+      if(typeof(a)=="number")
+      return AddNum(a,b);
+      else
+      return AddString(a,b);
+      }
+      }
+      function add(a,b){
+      return a+b;
+      }
+      function add(a,b){
+      return "I am here"+a+b;
+      }
+      var MyObj = new MyClass();
+      var X = MyObj.Add(5,6);
+      var Y = MyObj.Add("A","FFFFFF");
+      alert(X); //结果:11
+      alert(Y); //结果：I am hereAFFFFFF
+
+  </code>
+</pre>
+            <div class="line_item" data-line="173"></div>
+            <h3 class="line  " data-line="173" id="e9878de8bdbde5928ce5a49ae68081e79a84e585b3e7b3bb">重载和多态的关系</h3>
+            <div class="line_item" data-line="174"></div>
+            <p class="line  " data-line="174">叫声：猪叫 鸟叫
+                <br> add方法：传递两个数字 和 传递两个字符串实现的相加是不一样的。
+                <br> 这是函数的多态：都是相加函数，但是每种相加是不一样的。
             </p>
-<pre class="xiaoshujiang_code_container"><a class="xiaoshujiang_code_button hljs-keyword" title="拍照成代码图片"><i class="fa fa-camera"></i></a>
-  <code class="language-python hljs">
-      try {
-      doSomething();
-      } catch(ex) {
-      alert(ex.message);//作用域链在此处改变
-      }
-  </code>
-</pre>
-            <div class="line_item" data-line="50"></div>
-            <p class="line  " data-line="50">请注意，一旦catch语句执行完毕，作用域链机会返回到之前的状态。try-catch语句在代码调试和异常处理中非常有用，因此不建议完全避免。你可以通过优化代码来减少catch语句对性能的影响。一个很好的模式是将错误委托给一个函数处理，例如：</p>
-<pre class="xiaoshujiang_code_container"><a class="xiaoshujiang_code_button hljs-keyword" title="拍照成代码图片"><i class="fa fa-camera"></i></a>
-  <code class="language-python hljs">
-      try {
-      doSomething();
-      } catch(ex) {
-      handleError(ex); //委托给处理器方法
-      }
-  </code>
-</pre>
-            <div class="line_item" data-line="58"></div>
-            <p class="line  " data-line="58">优化后的代码，handleError方法是catch子句中唯一执行的代码。
-                该函数接收异常对象作为参数，这样你可以更加灵活和统一的处理错误。
-                由于只执行一条语句，且没有局部变量的访问，作用域链的临时改变就不会影响代码性能了。</p>
+            <div class="line_item" data-line="177"></div>
+            <h3 class="line  " data-line="177" id="e99da2e59091e5afb9e8b1a1e5a4a7e680bbe7bb93">面向对象大总结</h3>
+            <div class="line_item" data-line="179"></div>
+            <h4 class="line  " data-line="179" id="e99da2e59091e5afb9e8b1a1e7bc96e7a88be6809de7bbb4">面向对象编程思维</h4>
+            <div class="line_item" data-line="180"></div>
+            <p class="line  " data-line="180">提炼属性 方法</p>
+            <div class="line_item" data-line="181"></div>
+            <h4 class="line  " data-line="181" id="e69e84e980a0e587bde695b0">构造函数</h4>
+            <div class="line_item" data-line="182"></div>
+            <p class="line  " data-line="182">构造基础 构造函数进阶
+                <br> 实例拷贝理论
+            </p>
+            <div class="line_item" data-line="184"></div>
+            <h4 class="line  " data-line="184" id="e5b19ee680a7">属性</h4>
+            <div class="line_item" data-line="185"></div>
+            <p class="line  " data-line="185">双对象法则
+                <br> 构造函数属性
+                <br> 原型对象属性
+                <br> 私有属性
+                <br> 共有属性
+                <br> 静态属性
+            </p>
+            <div class="line_item" data-line="191"></div>
+            <h4 class="line  " data-line="191" id="e58e9fe59e8be993be">原型链</h4>
+            <div class="line_item" data-line="192"></div>
+            <p class="line  " data-line="192">属性搜索机制
+                <br> 继承上的原型链
+            </p>
+            <div class="line_item" data-line="194"></div>
+            <h4 class="line  " data-line="194" id="e4b889e4b8aae4bd9ce794a8">三个作用</h4>
+            <div class="line_item" data-line="195"></div>
+            <p class="line  " data-line="195">封装框架
+                <br> 描述数据
+                <br> 标准的json格式
+                <br> Var data =[{},{},{}]
+                <br> Var data = {list:[{},{},{}]}
+                <br> 面向对象编程和数据绑定
+                <br> ++this.name+
+                <br> formatString()
+                <br> Replace
+                <br> 基础
+                <br> 正则表达式
+                <br> $1 $2
+                <br> $&amp;
+                <br> $’
+                <br> 结合函数
+            </p>
+            <div class="line_item" data-line="211"></div>
+            <p class="line  " data-line="211">模板 arttemplate</p>
+            <div class="line_item" data-line="213"></div>
+            <p class="line  " data-line="213">拼接时代----
+                <br> 为什么我们进入了拼接时代
+            </p>
+            <div class="line_item" data-line="215"></div>
+            <h4 class="line  " data-line="215" id="e4bb8ee5afb9e8b1a1e8aea4e8af86e695b4e4b8aajse4b896e7958c">从对象认识整个js世界</h4>
+            <div class="line_item" data-line="216"></div>
+            <p class="line  " data-line="216">BOM
+                <br> 内置
+                <br> 自定义
+                <br> Function
+                <br> 鼻祖之间的原型链
+            </p>
+            <div class="line_item" data-line="221"></div>
+            <h3 class="line  " data-line="221" id="e4bb8ee58685e5ad98e8aea4e8af86e695b4e4b8aajse79bb4e68ea5">从内存认识整个js直接</h3>
+            <div class="line_item" data-line="222"></div>
+            <p class="line  " data-line="222">每个变量是如何在内存中存储的
+                <br> 引用类型 值类型
+                <br> 原型共享的本质----引用类型 值类型
+                <br> 实例和内存的关系
+                <br> 内存的生命周期
+            </p>
 
         </section>
     </div>
