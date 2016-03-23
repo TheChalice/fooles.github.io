@@ -1035,7 +1035,7 @@ ul.simple-pagination {
 
 .pagination-holder.black {
     padding: 20px 20px 15px 20px;
-    background: #444;
+    background: #333333;
     border: 1px solid #333;
     border-radius: 2px;
 }
@@ -1074,7 +1074,7 @@ ul.simple-pagination {
     }
 }
 #main section.post {
-    background: #242329;
+    background: #333333;
     margin-bottom: 2.125em;
 }
 #main section.post a {
