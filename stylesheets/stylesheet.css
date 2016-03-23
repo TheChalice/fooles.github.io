@@ -1040,7 +1040,7 @@ ul.simple-pagination {
     border-radius: 2px;
 }
 .simple-pagination li {
-    width: 7% !important;
+    width: 12% !important;
     text-align: center;
 }
 @media only screen and (min-width: 768px) {
