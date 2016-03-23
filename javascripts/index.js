@@ -54,16 +54,12 @@ $(function () {
     window.onscroll = function () {
         if (scroll().top > 0) {
             pocketmon1(pic0, scroll().top - 3550)
-            pocketmon1(pic1, scroll().top - 3550)
             ren.style.backgroundPosition = "-33px -167px"
             ren.style.right = "-45px"
-
         } else {
             pocketmon1(pic0, scroll().top - 3720)
-            pocketmon1(pic1, scroll().top - 3720)
             ren.style.backgroundPosition = "-143px 0px"
             ren.style.right = "-15px"
-
         }
 
         leaner = scroll().top
