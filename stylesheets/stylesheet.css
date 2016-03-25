@@ -783,9 +783,11 @@ footer a:hover {
     z-index: 2;
     margin-top: 30px;
 }
+
 .accordion a {
     font-size:15px;
 }
+
 .accordion h4::before {
     content: "";
     /*display: none;*/
@@ -942,10 +944,12 @@ footer a:hover {
 .ribbon:after {
     border-right-color:transparent;
 }
+
 .post-message p {
     color: cyan !important;
     font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
 }
+
 .ribbon:before {
     border-left-color:transparent;
 }
@@ -1043,25 +1047,32 @@ ul.simple-pagination {
     width: 12% !important;
     text-align: center;
 }
+
 @media only screen and (min-width: 768px) {
     #container {
         width: 100%;
     }
 }
+
 @media only screen and (min-width: 1024px) {
     #container {
         width: 100%;
     }
 }
+
 @media only screen and (min-width: 1560px) {
     #container {
         width: 100%;
     }
 }
+
 #main {
     width: 100%;
     line-height: 1.8;
 }
+
+
+
 @media only screen and (min-width: 1024px) {
     #main {
         width: 100%;
@@ -1073,10 +1084,12 @@ ul.simple-pagination {
         transition: margin 0.5s ease-out;
     }
 }
+
 #main section.post {
     background: #333333;
     margin-bottom: 2.125em;
 }
+
 #main section.post a {
     display: block;
     border-left: 0.5em solid #ccc;
@@ -1087,32 +1100,39 @@ ul.simple-pagination {
     transition: border-left 0.45s;
     padding: 0.5em;
 }
+
 @media only screen and (min-width: 768px) {
     #main section.post a {
         padding: 1em;
     }
 }
+
 #main section.post a:hover {
     border-left: 0.5em solid #ea6753;
 }
+
 #main section.post a h1 {
     color: #2ca6cb;
     line-height: 2;
     margin-left:5%;
 }
+
 #main section.post a p {
     color: #817c7c;
 }
+
 #main section.post a time {
     color: #817c7c;
     display: block;
     margin: 0.5em 0;
     font-size: 0.9em;
 }
+
 #main article.post-expand {
     background: #fafafa;
     margin-bottom: 3.5em;
 }
+
 #main article.post-expand .img-logo {
     max-width: 180px;
     max-height: 96px;
@@ -1123,6 +1143,7 @@ ul.simple-pagination {
     float: right;
     clear: right;
 }
+
 #main article.post-expand .img-topic {
     max-width: 300px;
     max-height: 1800px;
@@ -1133,6 +1154,7 @@ ul.simple-pagination {
     float: right;
     clear: right;
 }
+
 #main article.post-expand .article-more-link a {
     display: inline-block;
     line-height: 1em;
@@ -1143,15 +1165,18 @@ ul.simple-pagination {
     color: #817c7c;
     text-decoration: none;
 }
+
 #main article.post-expand .article-more-link a:hover {
     background: #ea6753;
     color: #fff;
     text-decoration: none;
 }
+
 #archive-page section.post a {
     font-size: 0.9em;
     padding: 0.5em !important;
 }
+
 @media only screen and (min-width: 768px) {
     #archive-page section.post a time {
         padding-left: 1em;
@@ -1161,9 +1186,15 @@ ul.simple-pagination {
 @media only screen and (max-width: 959px) {
 
 }
-
+.accordion .diqiu {
+    display: block;
+    /*margin-left: 77px;*/
+}
 /* Tablet Portrait size to standard 960 (devices and browsers) */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
+    #diqiu {
+        display: none!important;
+    }
     .ribbon{
         display: none;
     }
@@ -1219,6 +1250,9 @@ ul.simple-pagination {
 
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
+    #diqiu {
+        display: none!important;
+    }
     .ribbon {
         display: none;
     }
@@ -1299,9 +1333,12 @@ ul.simple-pagination {
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
     .ribbon {
-        display: none;
+        display: none!important;
     }
     .stage {
+        display: none;
+    }
+    #diqiu {
         display: none;
     }
 
@@ -1351,9 +1388,14 @@ ul.simple-pagination {
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {
     .ribbon {
+        display: none!important;
+    }
+
+    .stage {
         display: none;
     }
-    .stage {
+
+    #diqiu {
         display: none;
     }
 
@@ -1474,7 +1516,9 @@ ul.simple-pagination {
     position: absolute;
     z-index: 4;
 }
-
+#diqiu {
+    display: block;
+}
 
 
 
