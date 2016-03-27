@@ -1,17 +1,17 @@
 /**
-* simplePagination.js v1.6
-* A simple jQuery pagination plugin.
-* http://flaviusmatis.github.com/simplePagination.js/
-*
-* Copyright 2012, Flavius Matis
-* Released under the MIT license.
-* http://flaviusmatis.github.com/license.html
-*/
+ * simplePagination.js v1.6
+ * A simple jQuery pagination plugin.
+ * http://flaviusmatis.github.com/simplePagination.js/
+ *
+ * Copyright 2012, Flavius Matis
+ * Released under the MIT license.
+ * http://flaviusmatis.github.com/license.html
+ */
 /* ������������֮�� www.lanrenzhijia.com */
-(function($){
+(function ($) {
 
 	var methods = {
-		init: function(options) {
+		init: function (options) {
 			var o = $.extend({
 				items: 1,
 				itemsOnPage: 1,
@@ -27,11 +27,11 @@
 				cssStyle: 'light-theme',
 				labelMap: [],
 				selectOnClick: true,
-				onPageClick: function(pageNumber, event) {
+				onPageClick: function (pageNumber, event) {
 					// Callback triggered when a page is clicked
 					// Page number is given as an optional parameter
 				},
-				onInit: function() {
+				onInit: function () {
 					// Callback triggered immediately after initialization
 				}
 			}, options || {});
@@ -42,7 +42,7 @@
 			o.currentPage = o.currentPage - 1;
 			o.halfDisplayed = o.displayedPages / 2;
 
-			this.each(function() {
+			this.each(function () {
 				self.addClass(o.cssStyle + ' simple-pagination').data('pagination', o);
 				methods._draw.call(self);
 			});
@@ -52,12 +52,12 @@
 			return this;
 		},
 
-		selectPage: function(page) {
+		selectPage: function (page) {
 			methods._selectPage.call(this, page - 1);
 			return this;
 		},
 
-		prevPage: function() {
+		prevPage: function () {
 			var o = this.data('pagination');
 			if (o.currentPage > 0) {
 				methods._selectPage.call(this, o.currentPage - 1);
@@ -65,7 +65,7 @@
 			return this;
 		},
 
-		nextPage: function() {
+		nextPage: function () {
 			var o = this.data('pagination');
 			if (o.currentPage < o.pages - 1) {
 				methods._selectPage.call(this, o.currentPage + 1);
@@ -73,7 +73,7 @@
 			return this;
 		},
 
-		getPagesCount: function() {
+		getPagesCount: function () {
 			return this.data('pagination').pages;
 		},
 
@@ -81,7 +81,7 @@
 			return this.data('pagination').currentPage + 1;
 		},
 
-		destroy: function(){
+		destroy: function () {
 			this.empty();
 			return this;
 		},
@@ -94,12 +94,12 @@
 			return this;
 		},
 
-		redraw: function(){
+		redraw: function () {
 			methods._draw.call(this);
 			return this;
 		},
 
-		disable: function(){
+		disable: function () {
 			var o = this.data('pagination');
 			o.disabled = true;
 			this.data('pagination', o);
@@ -107,7 +107,7 @@
 			return this;
 		},
 
-		enable: function(){
+		enable: function () {
 			var o = this.data('pagination');
 			o.disabled = false;
 			this.data('pagination', o);
@@ -132,14 +132,14 @@
 			return this;
 		},
 
-		_draw: function() {
-			var	o = this.data('pagination'),
-				interval = methods._getInterval(o),
-				i,
-				tagName;
+		_draw: function () {
+			var o = this.data('pagination'),
+					interval = methods._getInterval(o),
+					i,
+					tagName;
 
 			methods.destroy.call(this);
-			
+
 			tagName = (typeof this.prop === 'function') ? this.prop('tagName') : this.attr('tagName');
 
 			var $panel = tagName === 'UL' ? this : $('<ul></ul>').appendTo(this);
@@ -186,19 +186,19 @@
 			}
 		},
 
-		_getPages: function(o) {
+		_getPages: function (o) {
 			var pages = Math.ceil(o.items / o.itemsOnPage);
 			return pages || 1;
 		},
 
-		_getInterval: function(o) {
+		_getInterval: function (o) {
 			return {
 				start: Math.ceil(o.currentPage > o.halfDisplayed ? Math.max(Math.min(o.currentPage - o.halfDisplayed, (o.pages - o.displayedPages)), 0) : 0),
 				end: Math.ceil(o.currentPage > o.halfDisplayed ? Math.min(o.currentPage + o.halfDisplayed, o.pages) : Math.min(o.displayedPages, o.pages))
 			};
 		},
 
-		_appendItem: function(pageIndex, opts) {
+		_appendItem: function (pageIndex, opts) {
 			var self = this, options, $link, o = self.data('pagination'), $linkWrapper = $('<li></li>'), $ul = self.find('ul');
 
 			pageIndex = pageIndex < 0 ? 0 : (pageIndex < o.pages ? pageIndex : o.pages - 1);
@@ -223,7 +223,7 @@
 				$link = $('<span class="current">' + (options.text) + '</span>');
 			} else {
 				$link = $('<a href="' + o.hrefTextPrefix + (pageIndex + 1) + o.hrefTextSuffix + '" class="page-link">' + (options.text) + '</a>');
-				$link.click(function(event){
+				$link.click(function (event) {
 					return methods._selectPage.call(self, pageIndex, event);
 				});
 			}
@@ -241,7 +241,7 @@
 			}
 		},
 
-		_selectPage: function(pageIndex, event) {
+		_selectPage: function (pageIndex, event) {
 			var o = this.data('pagination');
 			o.currentPage = pageIndex;
 			if (o.selectOnClick) {
@@ -252,7 +252,7 @@
 
 	};
 
-	$.fn.pagination = function(method) {
+	$.fn.pagination = function (method) {
 
 		// Method calling logic
 		if (methods[method] && method.charAt(0) != '_') {
@@ -260,7 +260,7 @@
 		} else if (typeof method === 'object' || !method) {
 			return methods.init.apply(this, arguments);
 		} else {
-			$.error('Method ' +  method + ' does not exist on jQuery.pagination');
+			$.error('Method ' + method + ' does not exist on jQuery.pagination');
 		}
 
 	};
